@@ -1,0 +1,120 @@
+## 🗂️ Pangunahing Apps (Core Domains)
+
+| # | App Name | Responsibilidad | Bakit hiwalay? |
+|---|----------|----------------|------------------|
+| 1 | `users` | Authentication, user accounts, roles (admin, teacher, student, parent), profile, password reset | **Mayroon ka na** – ito ang pundasyon ng identity at access control |
+| 2 | `students` | Student profile, contact info, guardians, medical records, student documents, ID generation | Madalas ang student data ay may maraming fields at relationships (guardian, medical) – hiwalay para hindi lumaki ang `users` |
+| 3 | `teachers` | Teacher profile, specialization, employment details, schedule preferences, qualifications | May mga field na unique sa guro (hal. employee ID, subjects taught, hire date) |
+| 4 | `academic` o `courses` | Subjects, course offerings, curriculum, syllabus, learning outcomes | Ito ang core ng akademiko – pwedeng mag-evolve nang hindi naaapektuhan ang ibang apps |
+| 5 | `classes` | Grade levels, sections, classrooms, academic year, semesters/quarters | Naghahandle ng structure ng klase at school calendar |
+| 6 | `enrollments` | Enrollment records, section assignment, dropping/transfer, enrollment status | Complex workflow (pending → enrolled → dropped) – dapat hiwalay para malinis ang state management |
+| 7 | `attendance` | Daily attendance ng students at teachers, late logging, excuses | Mataas ang volume ng data (araw-araw) – hiwalay para madaling i-optimize ang database |
+| 8 | `assessments` | Exams, quizzes, assignments, rubrics, question bank | Pwedeng lumaki na may sariling logic (auto-grading, time limit) |
+| 9 | `grades` | Grade entry, computation ng final grade, GPA/GWA, report cards, transcript | May sariling business rules (weighted average, transmutation) |
+| 10 | `fees` | Tuition fees, other fees, payment records, invoices, discounts, collection reports | Delikado at sensitive – dapat hiwalay ang accounting logic para sa audit at security |
+| 11 | `timetable` | Class schedules, room assignment, teacher assignment, conflict checking | May sariling algorithm para maiwasan ang schedule clash |
+| 12 | `communication` | Announcements, notifications (email/SMS/push), in-app messaging, parent-teacher conference | Real-time features (WebSocket) – dapat hiwalay para hindi makaapekto sa ibang apps |
+| 13 | `reports` | Report generation (PDF/Excel), analytics dashboard, export data | Lahat ng reporting logic sa isang lugar – reusable sa buong system |
+
+## 🧩 Karagdagang Apps (Para sa Kumpletong System)
+
+Kung gusto mong maging **enterprise-level**, idagdag mo rin ang:
+
+| App | Purpose |
+|-----|---------|
+| `library` | Book inventory, borrowing/return, overdue fines |
+| `transport` | Bus routes, student boarding points, driver assignment, GPS tracking |
+| `canteen` (optional) | Meal orders, balance, POS integration |
+| `alumni` | Graduate tracking, donations, events |
+| `hr` (kung malaking school) | Staff (non-teaching) records, payroll, leave management |
+| `facilities` | Room/equipment reservation, maintenance schedule |
+
+## 🏗️ Paano ang dependency at integration?
+
+Hindi lahat ng apps ay independent. May **dependency chain**:
+
+```
+users ──┬──> students
+        ├──> teachers
+        └──> parents (kung hiwalay)
+
+students ──> enrollments ──> classes
+teachers ──> timetable
+courses ──> assessments ──> grades
+
+fees ──> enrollments (kailangan enrolled bago mag-assess ng tuition)
+attendance ──> students
+```
+
+**Best practice:**  
+- Gumamit ng **ForeignKey** mula sa isang app patungo sa model ng ibang app (hal. `enrollments/models.py` ay may `student = ForeignKey('students.Student')`).  
+- Huwag gumawa ng **circular dependency** (App A imports App B at App B imports App A). Kung kailangan, ilipat ang common logic sa `core` o gumamit ng `contenttypes` framework ng Django.
+
+## 🎯 Priority ng paggawa (para hindi ma-overwhelm)
+
+Hindi mo kailangang gawin lahat sabay-sabay. Narito ang **incremental approach**:
+
+### Phase 1: Core Academic (MVP)
+1. `users` (meron ka na)
+2. `students`
+3. `teachers`
+4. `courses`
+5. `classes`
+6. `enrollments`
+7. `attendance` (simple muna)
+8. `grades` (basic grade entry)
+
+**Kaya na nito** ang daily operations ng isang maliit na paaralan.
+
+### Phase 2: Finance & Communication
+9. `fees`
+10. `communication`
+
+### Phase 3: Advanced Features
+11. `assessments` (exam module)
+12. `timetable` (automatic scheduling)
+13. `reports`
+
+### Phase 4: Extra Modules (kung kailangan)
+- library, transport, alumni, atbp.
+
+## 📁 Halimbawa ng magiging project structure pag nagawa mo na ang ilan:
+
+```
+AcademiaX/
+├── core/                # shared utilities, base classes, settings
+├── users/               # auth & profiles
+├── students/            # (gagawin pa)
+├── teachers/            # (gagawin pa)
+├── courses/             # (gagawin pa)
+├── classes/             # (gagawin pa)
+├── enrollments/         # (gagawin pa)
+├── attendance/          # (gagawin pa)
+├── grades/              # (gagawin pa)
+├── fees/                # (gagawin pa)
+├── communication/       # (gagawin pa)
+├── reports/             # (gagawin pa)
+└── manage.py
+```
+
+## ⚙️ Paano gumawa ng bagong app na may parehong structure ng `users`?
+
+Para hindi paulit-ulit, gumawa ka ng **template script** o **cookiecutter**. Halimbawa, gamit ang command:
+
+```bash
+python manage.py startapp students
+cd students
+mkdir models services handlers serializers views urls enums utils tasks signals sockets media_processing management tests
+# at gumawa ng __init__.py sa bawat folder
+```
+
+Mas maganda kung gagawa ka ng `create_app.py` sa `core/management/commands/` na awtomatikong gumagawa ng folder structure.
+
+## 💡 Konklusyon
+
+**Ang magandang structure** para sa School Management System ay may **hiwalay na app para sa bawat major domain**:
+- **Minimum** (MVP): users, students, teachers, courses, classes, enrollments, attendance, grades.
+- **Kumpleto** (production): idagdag ang fees, communication, assessments, timetable, reports.
+- **Enterprise**: library, transport, alumni, hr, facilities.
+
+Ang `users` app na ginawa mo ay isang **magandang template** – gayahin mo ang internal structure sa lahat ng bagong apps. Huwag kalimutang gumamit ng `core` para sa mga base classes at shared utilities para iwas duplication.

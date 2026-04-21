@@ -1,0 +1,4 @@
+.env
+*.pyc
+/core/settings/media
+.sqlite3

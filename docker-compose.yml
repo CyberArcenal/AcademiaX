@@ -1,0 +1,92 @@
+services:
+  web:
+    container_name: huddle
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "
+        python manage.py migrate &&
+        python manage.py runserver 0.0.0.0:8000
+      "
+    working_dir: /app
+    environment:
+      - TMPDIR=/shared_temp
+    volumes:
+      - .:/app:delegated
+      - shared_temp:/shared_temp 
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      
+  celery_worker:
+    build: .
+    command: celery -A core worker -l info
+    environment:
+      - TMPDIR=/shared_temp
+    volumes:
+      - .:/app
+      - shared_temp:/shared_temp 
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - db
+
+  celery_beat:
+    build: .
+    command: celery -A core beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - db
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+  
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok_tunnel
+    command: start --all --config /etc/ngrok.yml
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml:ro   # I-mount ang configuration file
+    ports:
+      - "4040:4040"                      # Para sa ngrok Web Interface
+    restart: unless-stopped
+    depends_on:
+      - web
+
+  db:
+    container_name: huddle_db
+    image: postgres:15
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  pgdata:
+  shared_temp:

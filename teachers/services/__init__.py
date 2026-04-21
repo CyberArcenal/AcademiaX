@@ -1,0 +1,4 @@
+from .teacher import TeacherService
+from .specialization import SpecializationService
+from .teaching_assignment import TeachingAssignmentService
+from .teacher_qualification import TeacherQualificationService
