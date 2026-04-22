@@ -4,10 +4,9 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 from datetime import date
-
-from ..models.payment import Payment
-from ..models.fee_assessment import FeeAssessment
-from ...users.models import User
+from fees.models.fee_assessment import FeeAssessment
+from fees.models.payment import Payment
+from users.models import User
 
 class PaymentService:
     """Service for Payment model operations"""

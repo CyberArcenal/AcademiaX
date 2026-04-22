@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from canteen.models import Wallet, WalletTransaction
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

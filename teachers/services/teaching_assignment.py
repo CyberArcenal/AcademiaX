@@ -4,10 +4,10 @@ from typing import Optional, List, Dict, Any
 
 from ..models.teaching_assignment import TeachingAssignment
 from ..models.teacher import Teacher
-from ...classes.models.section import Section
-from ...academic.models.subject import Subject
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.term import Term
+from classes.models.section import Section
+from academic.models.subject import Subject
+from classes.models.academic_year import AcademicYear
+from classes.models.term import Term
 
 class TeachingAssignmentService:
     """Service for TeachingAssignment model operations"""

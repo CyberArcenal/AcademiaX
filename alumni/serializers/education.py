@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from alumni.models import PostGraduateEducation
+from alumni.models.alumni import Alumni
 from .alumni import AlumniMinimalSerializer
 
 

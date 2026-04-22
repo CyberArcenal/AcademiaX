@@ -3,9 +3,11 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from typing import Optional, List, Dict, Any
 
-from ..models.alumni import Alumni
-from ...students.models.student import Student
-from ...users.models import User
+from alumni.models.alumni import Alumni
+from students.models.student import Student
+from users.models.user import User
+
+
 
 class AlumniService:
     """Service for Alumni model operations"""

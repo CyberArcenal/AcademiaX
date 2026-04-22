@@ -1,7 +1,8 @@
 from django.db import models
 from common.base.models import TimestampedModel, UUIDModel, SoftDeleteModel
 from common.enums.timetable import ScheduleType
-from .test_time_slot import TimeSlot
+from timetable.models.time_slot import TimeSlot
+
 
 class Schedule(TimestampedModel, UUIDModel, SoftDeleteModel):
     time_slot = models.ForeignKey(TimeSlot, on_delete=models.CASCADE, related_name='schedules')

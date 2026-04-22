@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
 from fees.models import Discount
 from classes.serializers.academic_year import AcademicYearMinimalSerializer
 from classes.serializers.grade_level import GradeLevelMinimalSerializer
@@ -11,7 +13,7 @@ class DiscountMinimalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Discount
-        fields = ["id", "name", "discount_type", "value", "is_active"]
+        fields = ["id", "name", "discount_type", "value", "is_active", "academic_year"]
         read_only_fields = fields
 
 

@@ -1,4 +1,7 @@
 from rest_framework import serializers
+from academic.models.academic_program import AcademicProgram
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
 from fees.models import FeeStructure
 from classes.serializers.academic_year import AcademicYearMinimalSerializer
 from classes.serializers.grade_level import GradeLevelMinimalSerializer

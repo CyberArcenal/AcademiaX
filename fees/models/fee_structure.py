@@ -13,6 +13,7 @@ class FeeStructure(TimestampedModel, UUIDModel, SoftDeleteModel):
     is_per_semester = models.BooleanField(default=True, help_text="If false, annual fee")
     due_date = models.DateField(null=True, blank=True)
     description = models.TextField(blank=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['academic_year', 'grade_level', 'category']

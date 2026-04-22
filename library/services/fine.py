@@ -6,8 +6,8 @@ from decimal import Decimal
 
 from ..models.fine import Fine
 from ..models.borrow import BorrowTransaction
-from ...users.models import User
-from ...common.enums.library import FineStatus
+from users.models import User
+from common.enums.library import FineStatus
 
 class FineService:
     """Service for Fine model operations"""

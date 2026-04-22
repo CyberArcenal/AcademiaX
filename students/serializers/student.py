@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from students.models import Student
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 from classes.serializers.grade_level import GradeLevelMinimalSerializer
 

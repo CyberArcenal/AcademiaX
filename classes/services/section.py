@@ -2,12 +2,13 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.section import Section
-from ..models.grade_level import GradeLevel
-from ..models.academic_year import AcademicYear
-from ..models.classroom import Classroom
-from ..models.term import Term
-from ...teachers.models.teacher import Teacher
+from classes.models.academic_year import AcademicYear
+from classes.models.classroom import Classroom
+from classes.models.grade_level import GradeLevel
+from classes.models.section import Section
+from classes.models.term import Term
+from teachers.models.teacher import Teacher
+
 
 class SectionService:
     """Service for Section model operations"""
@@ -90,7 +91,7 @@ class SectionService:
     @staticmethod
     def update_enrollment_count(section: Section) -> int:
         """Update current_enrollment based on active enrollments"""
-        from ...enrollments.models import Enrollment
+        from enrollments.models import Enrollment
         count = Enrollment.objects.filter(
             section=section,
             status='ENR'

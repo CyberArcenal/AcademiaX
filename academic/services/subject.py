@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from typing import Optional, List, Dict, Any
 
-from ..models.subject import Subject
-from ...common.enums.academic import SubjectType
+from academic.models.subject import Subject
+from common.enums.academic import SubjectType
 
 class SubjectService:
     """Service for Subject model operations"""

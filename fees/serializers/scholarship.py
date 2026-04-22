@@ -1,6 +1,9 @@
 from rest_framework import serializers
 from fees.models import Scholarship
+from fees.models.discount import Discount
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
+from users.models.user import User
 from .discount import DiscountMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

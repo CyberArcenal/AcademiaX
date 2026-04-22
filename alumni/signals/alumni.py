@@ -1,7 +1,7 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from alumni.models import Alumni
-from alumni.state_transition_service.alumni import AlumniStateTransitionService
+from alumni.state_transition_services.alumni import AlumniStateTransitionService
 
 
 @receiver(pre_save, sender=Alumni)

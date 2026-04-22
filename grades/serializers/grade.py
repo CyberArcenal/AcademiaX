@@ -1,10 +1,16 @@
 from rest_framework import serializers
+from academic.models.subject import Subject
+from classes.models.term import Term
+from enrollments.models.enrollment import Enrollment
 from grades.models import Grade
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
 from academic.serializers.subject import SubjectMinimalSerializer
 from enrollments.serializers.enrollment import EnrollmentMinimalSerializer
+from teachers.models.teacher import Teacher
 from teachers.serializers.teacher import TeacherMinimalSerializer
 from classes.serializers.term import TermMinimalSerializer
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from assessments.models import AssessmentGrade
+from assessments.models.submission import Submission
 from .submission import SubmissionMinimalSerializer
 
 

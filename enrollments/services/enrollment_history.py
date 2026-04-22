@@ -2,10 +2,11 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List
 
-from ..models.enrollment_history import EnrollmentHistory
-from ..models.enrollment import Enrollment
-from ...users.models import User
-from ...common.enums.enrollment import EnrollmentStatus, DropReason
+
+from enrollments.models.enrollment import Enrollment
+from enrollments.models.enrollment_history import EnrollmentHistory
+from users.models import User
+from common.enums.enrollment import EnrollmentStatus, DropReason
 
 class EnrollmentHistoryService:
     """Service for EnrollmentHistory model operations"""

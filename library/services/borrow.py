@@ -6,9 +6,9 @@ from datetime import date, timedelta
 
 from ..models.borrow import BorrowTransaction
 from ..models.copy import BookCopy
-from ...students.models.student import Student
-from ...users.models import User
-from ...common.enums.library import BookStatus, BorrowStatus
+from students.models.student import Student
+from users.models import User
+from common.enums.library import BookStatus, BorrowStatus
 
 class BorrowTransactionService:
     """Service for BorrowTransaction model operations"""

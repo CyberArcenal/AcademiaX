@@ -4,10 +4,10 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
-from ..models.assessment import Assessment
-from ...academic.models.subject import Subject
-from ...teachers.models.teacher import Teacher
-from ...common.enums.assessment import AssessmentType
+from assessments.models.assessment import Assessment
+from academic.models.subject import Subject
+from teachers.models.teacher import Teacher
+from common.enums.assessment import AssessmentType
 
 class AssessmentService:
     """Service for Assessment model operations"""

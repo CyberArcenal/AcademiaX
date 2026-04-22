@@ -4,11 +4,12 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import date
 
-from ..models.maintenance import MaintenanceRequest
-from ..models.facility import Facility
-from ..models.equipment import Equipment
-from ...users.models import User
-from ...common.enums.facilities import MaintenancePriority, MaintenanceStatus
+
+from facilities.models.equipment import Equipment
+from facilities.models.facility import Facility
+from facilities.models.maintenance import MaintenanceRequest
+from users.models import User
+from common.enums.facilities import MaintenancePriority, MaintenanceStatus
 
 class MaintenanceRequestService:
     """Service for MaintenanceRequest model operations"""

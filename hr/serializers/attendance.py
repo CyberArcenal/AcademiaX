@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from hr.models import EmployeeAttendance
+from hr.models.employee import Employee
 from .employee import EmployeeMinimalSerializer
 
 

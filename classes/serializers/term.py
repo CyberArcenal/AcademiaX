@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from classes.models import Term
+from classes.models.academic_year import AcademicYear
 from .academic_year import AcademicYearMinimalSerializer
 
 

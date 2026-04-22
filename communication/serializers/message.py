@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from communication.models import Message
+from communication.models.conversation import Conversation
+from users.models.user import User
 from .conversation import ConversationMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

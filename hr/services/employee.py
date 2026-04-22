@@ -6,8 +6,8 @@ from datetime import date
 from ..models.employee import Employee
 from ..models.department import Department
 from ..models.position import Position
-from ...users.models import User
-from ...common.enums.hr import EmploymentType, EmploymentStatus
+from users.models import User
+from common.enums.hr import EmploymentType, EmploymentStatus
 
 class EmployeeService:
     """Service for Employee model operations"""

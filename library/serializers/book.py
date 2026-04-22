@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from library.models import Book
+from library.models.author import Author
+from library.models.publisher import Publisher
 from .author import AuthorMinimalSerializer
 from .publisher import PublisherMinimalSerializer
 

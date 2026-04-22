@@ -1,7 +1,8 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from assessments.models import Assessment
-from assessments.state_transition_service.assessment import AssessmentStateTransitionService
+from assessments.state_transition_services.assessment import AssessmentStateTransitionService
+
 
 
 @receiver(pre_save, sender=Assessment)

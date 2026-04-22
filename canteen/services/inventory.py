@@ -2,9 +2,11 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.inventory import InventoryLog
-from ..models.product import Product
-from ...users.models import User
+from canteen.models.inventory import InventoryLog
+from canteen.models.product import Product
+from users.models.user import User
+
+
 
 class InventoryLogService:
     """Service for InventoryLog model operations"""

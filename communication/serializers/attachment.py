@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from communication.models import MessageAttachment
+from communication.models import MessageAttachment, Message
+from users.models.user import User
 from .message import MessageMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

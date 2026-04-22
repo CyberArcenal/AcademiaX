@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from canteen.models import PaymentTransaction
+from canteen.models.order import Order
+from users.models.user import User
 from .order import OrderMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

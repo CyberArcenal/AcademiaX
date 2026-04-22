@@ -1,9 +1,14 @@
 from rest_framework import serializers
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
+from classes.models.section import Section
 from enrollments.models import Enrollment
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
 from classes.serializers.academic_year import AcademicYearMinimalSerializer
 from classes.serializers.grade_level import GradeLevelMinimalSerializer
 from classes.serializers.section import SectionMinimalSerializer
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

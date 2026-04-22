@@ -4,13 +4,15 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import date, time
 
-from ..models.student_attendance import StudentAttendance
-from ...students.models.student import Student
-from ...classes.models.section import Section
-from ...academic.models.subject import Subject
-from ...classes.models.academic_year import AcademicYear
-from ...teachers.models.teacher import Teacher
-from ...common.enums.attendance import AttendanceStatus, LateReason
+from academic.models.subject import Subject
+from attendance.models.student_attendance import StudentAttendance
+from classes.models.academic_year import AcademicYear
+from classes.models.section import Section
+from common.enums.attendance import AttendanceStatus
+from students.models.student import Student
+from teachers.models.teacher import Teacher
+
+
 
 class StudentAttendanceService:
     """Service for StudentAttendance model operations"""

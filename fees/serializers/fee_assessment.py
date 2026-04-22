@@ -1,6 +1,9 @@
 from rest_framework import serializers
+from classes.models.term import Term
+from enrollments.models.enrollment import Enrollment
 from fees.models import FeeAssessment
 from enrollments.serializers.enrollment import EnrollmentMinimalSerializer
+from fees.models.fee_structure import FeeStructure
 from .fee_structure import FeeStructureMinimalSerializer
 from classes.serializers.term import TermMinimalSerializer
 

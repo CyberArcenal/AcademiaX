@@ -1,7 +1,8 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from fees.models import FeeAssessment
-from fees.state_transition_service.fee_assessment import FeeAssessmentStateTransitionService
+from fees.state_transition_services.fee_assessment import FeeAssessmentStateTransitionService
+
 
 
 @receiver(pre_save, sender=FeeAssessment)

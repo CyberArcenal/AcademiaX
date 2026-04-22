@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from library.models import Fine
+from library.models.borrow import BorrowTransaction
+from users.models.user import User
 from .borrow import BorrowTransactionMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

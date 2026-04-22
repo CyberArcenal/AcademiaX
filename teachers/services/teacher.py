@@ -4,8 +4,8 @@ from typing import Optional, List, Dict, Any
 from datetime import date
 
 from ..models.teacher import Teacher
-from ...users.models import User
-from ...common.enums.teachers import TeacherStatus, TeacherType, HighestDegree
+from users.models import User
+from common.enums.teachers import TeacherStatus, TeacherType, HighestDegree
 
 class TeacherService:
     """Service for Teacher model operations"""
@@ -138,7 +138,7 @@ class TeacherService:
     def get_teachers_by_department(department_id: int) -> List[Teacher]:
         # Assuming department is linked via employee in HR, but for direct use in teaching assignments
         # This is a placeholder; actual implementation would use HR employee relationship
-        from ...hr.models import Employee
+        from hr.models import Employee
         employees = Employee.objects.filter(department_id=department_id)
         user_ids = employees.values_list('user_id', flat=True)
         return Teacher.objects.filter(user_id__in=user_ids)

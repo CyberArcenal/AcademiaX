@@ -3,9 +3,11 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date
 
-from ..models.test_room_schedule import RoomSchedule
-from ..models.test_time_slot import TimeSlot
-from ...facilities.models.facility import Facility
+from timetable.models.room_schedule import RoomSchedule
+from timetable.models.time_slot import TimeSlot
+
+
+from facilities.models.facility import Facility
 
 class RoomScheduleService:
     """Service for RoomSchedule model operations"""

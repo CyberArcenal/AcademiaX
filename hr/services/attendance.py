@@ -5,7 +5,7 @@ from datetime import date, time
 
 from ..models.attendance import EmployeeAttendance
 from ..models.employee import Employee
-from ...common.enums.hr import AttendanceStatus
+from common.enums.hr import AttendanceStatus
 
 class EmployeeAttendanceService:
     """Service for EmployeeAttendance model operations"""

@@ -1,4 +1,7 @@
 from rest_framework import serializers
+from academic.models.subject import Subject
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
 from grades.models import GradeComponent
 from academic.serializers.subject import SubjectMinimalSerializer
 from classes.serializers.academic_year import AcademicYearMinimalSerializer

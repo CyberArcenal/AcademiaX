@@ -4,9 +4,10 @@ from django.utils import timezone
 from typing import Optional, List
 from decimal import Decimal
 
-from ..models.enrollment_hold import EnrollmentHold
-from ..models.enrollment import Enrollment
-from ...users.models import User
+
+from enrollments.models.enrollment import Enrollment
+from enrollments.models.enrollment_hold import EnrollmentHold
+from users.models import User
 
 class EnrollmentHoldService:
     """Service for EnrollmentHold model operations"""

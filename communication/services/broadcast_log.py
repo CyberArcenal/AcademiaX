@@ -3,9 +3,9 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List
 
-from ..models.broadcast_log import BroadcastLog
-from ..models.announcement import Announcement
-from ...users.models import User
+from communication.models.announcement import Announcement
+from communication.models.broadcast_log import BroadcastLog
+from users.models import User
 
 class BroadcastLogService:
     """Service for BroadcastLog model operations"""

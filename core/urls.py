@@ -6,6 +6,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from core.views.base import health_check
+from core.views.jwt import RefreshTokenView
+from core.views.verify import TokenVerifyView
+from users.views.login.login import LoginView
+from users.views.login.logout import LogoutView
+from users.urls.otp_request import urlpatterns as otp
 logger = logging.getLogger(__name__)
 
 

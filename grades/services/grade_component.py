@@ -4,9 +4,9 @@ from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
 from ..models.grade_component import GradeComponent
-from ...academic.models.subject import Subject
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.grade_level import GradeLevel
+from academic.models.subject import Subject
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
 
 class GradeComponentService:
     """Service for GradeComponent model operations"""

@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from users.models import User
-from users.enums import UserRole, UserStatus
 
 
 class UserCreateSerializer(serializers.ModelSerializer):

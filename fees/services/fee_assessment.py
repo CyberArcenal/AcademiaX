@@ -5,11 +5,12 @@ from typing import Optional, List, Dict, Any
 from decimal import Decimal
 from datetime import date
 
-from ..models.fee_assessment import FeeAssessment
-from ..models.fee_structure import FeeStructure
-from ...enrollments.models.enrollment import Enrollment
-from ...classes.models.term import Term
-from ...common.enums.fees import PaymentStatus
+
+from enrollments.models.enrollment import Enrollment
+from classes.models.term import Term
+from common.enums.fees import PaymentStatus
+from fees.models.fee_assessment import FeeAssessment
+from fees.models.fee_structure import FeeStructure
 
 class FeeAssessmentService:
     """Service for FeeAssessment model operations"""

@@ -2,11 +2,10 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date
-
-from ..models.scholarship import Scholarship
-from ..models.discount import Discount
-from ...students.models.student import Student
-from ...users.models import User
+from fees.models.discount import Discount
+from fees.models.scholarship import Scholarship
+from students.models.student import Student
+from users.models import User
 
 class ScholarshipService:
     """Service for Scholarship model operations"""

@@ -4,8 +4,8 @@ from typing import Optional, List, Dict, Any
 from datetime import date
 
 from ..models.student import Student
-from ...users.models import User
-from ...common.enums.students import StudentStatus, Gender
+from users.models import User
+from common.enums.students import StudentStatus, Gender
 
 class StudentService:
     """Service for Student model operations"""
@@ -140,7 +140,7 @@ class StudentService:
 
     @staticmethod
     def get_students_by_grade_level(grade_level_id: int, academic_year_id: int) -> List[Student]:
-        from ...enrollments.models import Enrollment
+        from enrollments.models import Enrollment
         enrollments = Enrollment.objects.filter(
             grade_level_id=grade_level_id,
             academic_year_id=academic_year_id,

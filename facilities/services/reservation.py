@@ -3,11 +3,10 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import datetime
-
-from ..models.reservation import FacilityReservation
-from ..models.facility import Facility
-from ...users.models import User
-from ...common.enums.facilities import ReservationStatus
+from facilities.models.facility import Facility
+from facilities.models.reservation import FacilityReservation
+from users.models import User
+from common.enums.facilities import ReservationStatus
 
 class FacilityReservationService:
     """Service for FacilityReservation model operations"""

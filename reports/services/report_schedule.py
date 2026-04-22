@@ -4,8 +4,8 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 
 from ..models.report_schedule import ReportSchedule
-from ...users.models import User
-from ...common.enums.reports import ReportType, ReportFormat, ReportStatus
+from users.models import User
+from common.enums.reports import ReportType, ReportFormat, ReportStatus
 
 class ReportScheduleService:
     """Service for ReportSchedule model operations"""

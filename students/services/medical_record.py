@@ -4,7 +4,7 @@ from typing import Optional, Dict, Any
 
 from ..models.medical_record import MedicalRecord
 from ..models.student import Student
-from ...common.enums.students import BloodType
+from common.enums.students import BloodType
 
 class MedicalRecordService:
     """Service for MedicalRecord model operations"""

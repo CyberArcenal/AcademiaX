@@ -1,8 +1,12 @@
 from rest_framework import serializers
+from classes.models.academic_year import AcademicYear
+from classes.models.term import Term
 from grades.models import ReportCard
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
 from classes.serializers.academic_year import AcademicYearMinimalSerializer
 from classes.serializers.term import TermMinimalSerializer
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

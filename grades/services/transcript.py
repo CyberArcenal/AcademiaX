@@ -5,7 +5,7 @@ from decimal import Decimal
 from datetime import date
 
 from ..models.transcript import Transcript
-from ...students.models.student import Student
+from students.models.student import Student
 
 class TranscriptService:
     """Service for Transcript model operations"""

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from facilities.models import Equipment
+from facilities.models.facility import Facility
 from .facility import FacilityMinimalSerializer
 
 

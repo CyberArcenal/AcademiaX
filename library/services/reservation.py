@@ -6,8 +6,8 @@ from datetime import date, timedelta
 
 from ..models.reservation import Reservation
 from ..models.copy import BookCopy
-from ...students.models.student import Student
-from ...common.enums.library import BookStatus
+from students.models.student import Student
+from common.enums.library import BookStatus
 
 class ReservationService:
     """Service for Reservation model operations"""

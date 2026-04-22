@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from students.models import StudentDocument
+from students.models.student import Student
+from users.models.user import User
 from .student import StudentMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from assessments.models import Answer
+from assessments.models.choice import Choice
+from assessments.models.question import Question
+from assessments.models.submission import Submission
 from .submission import SubmissionMinimalSerializer
 from .question import QuestionMinimalSerializer
 

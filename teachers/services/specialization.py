@@ -4,7 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from ..models.specialization import Specialization
 from ..models.teacher import Teacher
-from ...academic.models.subject import Subject
+from academic.models.subject import Subject
 
 class SpecializationService:
     """Service for Specialization model operations"""

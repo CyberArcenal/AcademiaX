@@ -4,7 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from ..models.report_log import ReportLog
 from ..models.report import Report
-from ...users.models import User
+from users.models import User
 
 class ReportLogService:
     """Service for ReportLog model operations"""

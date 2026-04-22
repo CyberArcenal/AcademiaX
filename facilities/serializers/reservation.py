@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from facilities.models import FacilityReservation
+from facilities.models.facility import Facility
+from users.models.user import User
 from .facility import FacilityMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 
@@ -12,7 +14,7 @@ class FacilityReservationMinimalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FacilityReservation
-        fields = ["id", "facility", "title", "start_datetime", "end_datetime", "status"]
+        fields = ["id", "facility", "title", "start_datetime", "end_datetime", "status", "reserved_by"]
         read_only_fields = fields
 
 

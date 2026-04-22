@@ -4,9 +4,11 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
-from ..models.event import AlumniEvent, EventAttendance
-from ..models.alumni import Alumni
-from ...common.enums.alumni import RSVPStatus
+from alumni.models.alumni import Alumni
+from alumni.models.event import AlumniEvent, EventAttendance
+from common.enums.alumni import RSVPStatus
+
+
 
 class AlumniEventService:
     """Service for AlumniEvent model operations"""

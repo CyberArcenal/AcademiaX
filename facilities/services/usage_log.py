@@ -4,10 +4,10 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
-from ..models.usage_log import FacilityUsageLog
-from ..models.facility import Facility
-from ..models.reservation import FacilityReservation
-from ...users.models import User
+from facilities.models.facility import Facility
+from facilities.models.reservation import FacilityReservation
+from facilities.models.usage_log import FacilityUsageLog
+from users.models import User
 
 class FacilityUsageLogService:
     """Service for FacilityUsageLog model operations"""

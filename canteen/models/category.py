@@ -6,6 +6,7 @@ class Category(TimestampedModel, UUIDModel, SoftDeleteModel):
     name = models.CharField(max_length=50, choices=ProductCategory.choices, unique=True)
     description = models.TextField(blank=True)
     display_order = models.PositiveSmallIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['display_order', 'name']

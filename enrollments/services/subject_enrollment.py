@@ -4,11 +4,12 @@ from typing import Optional, List, Dict, Any
 from decimal import Decimal
 from datetime import date
 
-from ..models.subject_enrollment import SubjectEnrollment
-from ..models.enrollment import Enrollment
-from ...academic.models.subject import Subject
-from ...teachers.models.teacher import Teacher
-from ...common.enums.enrollment import DropReason
+
+from academic.models.subject import Subject
+from enrollments.models.enrollment import Enrollment
+from enrollments.models.subject_enrollment import SubjectEnrollment
+from teachers.models.teacher import Teacher
+from common.enums.enrollment import DropReason
 
 class SubjectEnrollmentService:
     """Service for SubjectEnrollment model operations"""

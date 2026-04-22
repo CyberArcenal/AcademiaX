@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from enrollments.models import EnrollmentHold
+from enrollments.models.enrollment import Enrollment
+from users.models.user import User
 from .enrollment import EnrollmentMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from grades.models import Transcript
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
 
 

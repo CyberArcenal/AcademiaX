@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from reports.models import ReportSchedule
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 
@@ -10,7 +11,7 @@ class ReportScheduleMinimalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ReportSchedule
-        fields = ["id", "name", "report_type", "cron_expression", "is_active", "last_run_at"]
+        fields = ["id", "name", "report_type", "cron_expression", "is_active", "last_run_at", "created_by"]
         read_only_fields = fields
 
 

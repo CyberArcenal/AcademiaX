@@ -11,6 +11,7 @@ class PaymentTransaction(TimestampedModel, UUIDModel):
     reference_number = models.CharField(max_length=100, blank=True, help_text="For card/QR transactions")
     paid_at = models.DateTimeField(auto_now_add=True)
     received_by = models.ForeignKey('users.User', on_delete=models.SET_NULL, null=True)
+    notes = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return f"Payment for {self.order.order_number} - ₱{self.amount_paid}"

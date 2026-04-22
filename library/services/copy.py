@@ -5,7 +5,7 @@ from datetime import date
 
 from ..models.copy import BookCopy
 from ..models.book import Book
-from ...common.enums.library import BookStatus
+from common.enums.library import BookStatus
 
 class BookCopyService:
     """Service for BookCopy model operations"""

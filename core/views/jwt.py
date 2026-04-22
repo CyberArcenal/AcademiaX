@@ -12,11 +12,9 @@ from django.utils import timezone
 from django.db import transaction
 from rest_framework.permissions import AllowAny
 import logging
-from global_utils.logger import log_audit_event
-from global_utils.security import get_client_ip
 import uuid
 from drf_spectacular.utils import extend_schema, OpenApiExample, OpenApiTypes
-from users.enums import UserStatus
+from common.utils.helpers import get_client_ip
 from users.serializers.auth import (
     TokenRefreshRequestSerializer,
     TokenRefreshResponseSerializer,

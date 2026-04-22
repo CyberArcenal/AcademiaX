@@ -3,9 +3,10 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date
 
-from ..models.term import Term
-from ..models.academic_year import AcademicYear
-from ...common.enums.classes import TermType
+from classes.models.academic_year import AcademicYear
+from classes.models.term import Term
+
+
 
 class TermService:
     """Service for Term model operations"""

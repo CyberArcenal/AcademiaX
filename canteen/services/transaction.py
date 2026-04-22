@@ -4,10 +4,12 @@ from django.utils import timezone
 from typing import Optional, Dict, Any
 from decimal import Decimal
 
-from ..models.transaction import PaymentTransaction
-from ..models.order import Order
-from ...users.models import User
-from ...common.enums.canteen import OrderStatus, PaymentMethod
+from canteen.models.order import Order
+from canteen.models.transaction import PaymentTransaction
+from common.enums.canteen import OrderStatus, PaymentMethod
+from users.models.user import User
+
+
 
 class PaymentTransactionService:
     """Service for PaymentTransaction model operations"""

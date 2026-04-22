@@ -1,6 +1,8 @@
 from rest_framework import serializers
+from academic.models.subject import Subject
 from assessments.models import Assessment
 from academic.serializers.subject import SubjectMinimalSerializer
+from teachers.models.teacher import Teacher
 from teachers.serializers.teacher import TeacherMinimalSerializer
 
 

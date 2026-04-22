@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from canteen.models import Product
+from canteen.models.category import Category
 from .category import CategoryMinimalSerializer
 
 

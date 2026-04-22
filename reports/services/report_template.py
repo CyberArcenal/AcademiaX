@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
 from ..models.report_template import ReportTemplate
-from ...users.models import User
-from ...common.enums.reports import ReportType
+from users.models import User
+from common.enums.reports import ReportType
 
 class ReportTemplateService:
     """Service for ReportTemplate model operations"""

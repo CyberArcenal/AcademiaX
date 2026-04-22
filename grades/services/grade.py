@@ -4,14 +4,14 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
-from ..models.grade import Grade
-from ...students.models.student import Student
-from ...academic.models.subject import Subject
-from ...enrollments.models.enrollment import Enrollment
-from ...teachers.models.teacher import Teacher
-from ...classes.models.term import Term
-from ...users.models import User
-from ...common.enums.grades import GradeStatus
+from grades.models.grade import Grade
+from students.models.student import Student
+from academic.models.subject import Subject
+from enrollments.models.enrollment import Enrollment
+from teachers.models.teacher import Teacher
+from classes.models.term import Term
+from users.models import User
+from common.enums.grades import GradeStatus
 
 class GradeService:
     """Service for Grade model operations"""

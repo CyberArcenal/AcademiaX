@@ -2,8 +2,8 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.category import Category
-from ...common.enums.canteen import ProductCategory
+from canteen.models.category import Category
+
 
 class CategoryService:
     """Service for Category model operations"""

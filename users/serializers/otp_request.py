@@ -2,8 +2,8 @@ from rest_framework import serializers
 from django.utils import timezone
 import logging
 
+from users.enums.otp_request import OtpRequestType
 from users.models import OtpRequest, User
-from users.models.utilities import OTP_TYPES
 from users.serializers.user.minimal import UserMinimalSerializer
 from users.services.otp_request import OtpRequestService
 
@@ -46,7 +46,7 @@ class OtpRequestCreateSerializer(serializers.Serializer):
         required=True
     )
     type = serializers.ChoiceField(
-        choices=OTP_TYPES,
+        choices=OtpRequestType.choices,
         default='email'
     )
 

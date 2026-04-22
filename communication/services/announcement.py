@@ -3,11 +3,11 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 
-from ..models.announcement import Announcement
-from ...users.models import User
-from ...classes.models.grade_level import GradeLevel
-from ...classes.models.section import Section
-from ...common.enums.communication import TargetAudience, NotificationChannel
+from communication.models.announcement import Announcement
+from users.models import User
+from classes.models.grade_level import GradeLevel
+from classes.models.section import Section
+from common.enums.communication import TargetAudience, NotificationChannel
 
 class AnnouncementService:
     """Service for Announcement model operations"""

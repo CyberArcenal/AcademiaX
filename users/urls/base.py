@@ -1,4 +1,5 @@
-from django.urls import path
+import django
+from django.urls import include, path
 from users.views.user import (
     UserListView,
     UserDetailView,
@@ -7,6 +8,10 @@ from users.views.user import (
     UserChangePasswordView,
 )
 from users.views.user_log import UserLogListView
+from .login import urlpatterns as login_urlpatterns
+from .login_checkpoint import urlpatterns as checkpoint
+from .password_reset import urlpatterns as password_urlpatterns
+
 
 urlpatterns = [
     path("users/", UserListView.as_view(), name="user-list"),
@@ -15,4 +20,10 @@ urlpatterns = [
     path("users/me/", UserMeView.as_view(), name="user-me"),
     path("users/me/change-password/", UserChangePasswordView.as_view(), name="user-change-password"),
     path("user-logs/", UserLogListView.as_view(), name="user-log-list"),
+]
+
+urlpatterns += [
+    path("auth/", include(login_urlpatterns)),
+    path("password/", include(password_urlpatterns)),
+    path("auth-checkpoints/", include(checkpoint)),
 ]

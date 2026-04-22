@@ -6,7 +6,7 @@ from datetime import date
 
 from ..models.leave import LeaveRequest
 from ..models.employee import Employee
-from ...common.enums.hr import LeaveType, LeaveStatus
+from common.enums.hr import LeaveType, LeaveStatus
 
 class LeaveRequestService:
     """Service for LeaveRequest model operations"""

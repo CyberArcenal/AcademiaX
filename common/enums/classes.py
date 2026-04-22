@@ -11,5 +11,5 @@ class RoomType(models.TextChoices):
     LABORATORY = 'LB', 'Laboratory'
     AUDITORIUM = 'AD', 'Auditorium'
     GYM = 'GY', 'Gymnasium'
-    LIBRARY = 'LB', 'Library'
+    LIBRARY = 'LR', 'Library'
     OFFICE = 'OF', 'Office'

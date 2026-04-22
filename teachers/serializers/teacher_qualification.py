@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from teachers.models import TeacherQualification
+from teachers.models.teacher import Teacher
 from .teacher import TeacherMinimalSerializer
 
 

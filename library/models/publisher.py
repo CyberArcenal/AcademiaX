@@ -7,6 +7,7 @@ class Publisher(TimestampedModel, UUIDModel, SoftDeleteModel):
     contact_number = models.CharField(max_length=20, blank=True)
     email = models.EmailField(blank=True)
     website = models.URLField(blank=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['name']

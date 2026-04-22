@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
 from ..models.parent import Parent
-from ...users.models import User
-from ...common.enums.parents import ParentStatus
+from users.models import User
+from common.enums.parents import ParentStatus
 
 class ParentService:
     """Service for Parent model operations"""

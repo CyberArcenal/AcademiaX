@@ -5,7 +5,7 @@ from datetime import datetime
 
 from ..models.parent_communication import ParentCommunicationLog
 from ..models.parent import Parent
-from ...users.models import User
+from users.models import User
 
 class ParentCommunicationLogService:
     """Service for ParentCommunicationLog model operations"""

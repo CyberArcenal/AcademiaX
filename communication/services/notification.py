@@ -3,9 +3,10 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 
-from ..models.notification import Notification
-from ...users.models import User
-from ...common.enums.communication import NotificationType, NotificationChannel
+
+from communication.models.notification import Notification
+from users.models import User
+from common.enums.communication import NotificationType, NotificationChannel
 
 class NotificationService:
     """Service for Notification model operations"""

@@ -3,10 +3,11 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 
-from ..models.message import Message
-from ..models.conversation import Conversation
-from ...users.models import User
-from ...common.enums.communication import MessageStatus
+
+from communication.models import Message
+from communication.models.conversation import Conversation
+from users.models import User
+from common.enums.communication import MessageStatus
 
 class MessageService:
     """Service for Message model operations"""

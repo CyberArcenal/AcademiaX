@@ -2,14 +2,16 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.test_schedule import Schedule
-from ..models.test_time_slot import TimeSlot
-from ...classes.models.section import Section
-from ...academic.models.subject import Subject
-from ...teachers.models.teacher import Teacher
-from ...facilities.models.facility import Facility
-from ...classes.models.term import Term
-from ...common.enums.timetable import ScheduleType
+from timetable.models.schedule import Schedule
+from timetable.models.time_slot import TimeSlot
+
+
+from classes.models.section import Section
+from academic.models.subject import Subject
+from teachers.models.teacher import Teacher
+from facilities.models.facility import Facility
+from classes.models.term import Term
+from common.enums.timetable import ScheduleType
 
 class ScheduleService:
     """Service for Schedule model operations"""
@@ -130,7 +132,7 @@ class ScheduleService:
 
     @staticmethod
     def get_class_schedule_for_student(student_id: int, term_id: int) -> List[Schedule]:
-        from ...enrollments.models import Enrollment
+        from enrollments.models import Enrollment
         enrollment = Enrollment.objects.filter(student_id=student_id, status='ENR').first()
         if enrollment:
             return Schedule.objects.filter(section=enrollment.section, term_id=term_id, is_active=True)

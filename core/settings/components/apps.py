@@ -21,8 +21,27 @@ INSTALLED_APPS = [
 ]
 
 # Project apps (single source of truth)
-PROJECT_APPS = [
 
+PROJECT_APPS = [
+    "academic",
+    "alumni",
+    "assessments",
+    "attendance",
+    "canteen",
+    "classes",
+    "communication",
+    "enrollments",
+    "facilities",
+    "fees",
+    "grades",
+    "hr",
+    "library",
+    "parents",
+    "reports",
+    "students",
+    "teachers",
+    "timetable",
+    "users"
 ]
 
 INSTALLED_APPS += PROJECT_APPS

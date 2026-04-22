@@ -4,8 +4,8 @@ from typing import Optional, List, Dict, Any
 
 from ..models.student_parent import StudentParent
 from ..models.parent import Parent
-from ...students.models.student import Student
-from ...common.enums.parents import RelationshipType
+from students.models.student import Student
+from common.enums.parents import RelationshipType
 
 class StudentParentService:
     """Service for StudentParent model operations"""

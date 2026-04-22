@@ -3,10 +3,10 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 
-from ..models.submission import Submission
-from ..models.assessment import Assessment
-from ...students.models.student import Student
-from ...common.enums.assessment import SubmissionStatus
+from assessments.models.submission import Submission
+from assessments.models.assessment import Assessment
+from students.models.student import Student
+from common.enums.assessment import SubmissionStatus
 
 class SubmissionService:
     """Service for Submission model operations"""

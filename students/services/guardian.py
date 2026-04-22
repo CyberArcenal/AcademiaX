@@ -4,7 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from ..models.guardian import Guardian
 from ..models.student import Student
-from ...common.enums.parents import RelationshipType
+from common.enums.parents import RelationshipType
 
 class GuardianService:
     """Service for Guardian model operations"""

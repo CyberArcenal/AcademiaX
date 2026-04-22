@@ -3,9 +3,11 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import time
 
-from ..models.test_time_slot import TimeSlot
-from ...classes.models.academic_year import AcademicYear
-from ...common.enums.timetable import DayOfWeek
+from timetable.models.time_slot import TimeSlot
+
+
+from classes.models.academic_year import AcademicYear
+from common.enums.timetable import DayOfWeek
 
 class TimeSlotService:
     """Service for TimeSlot model operations"""

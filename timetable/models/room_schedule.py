@@ -1,7 +1,8 @@
 from django.db import models
 from common.base.models import TimestampedModel, UUIDModel
-from .test_time_slot import TimeSlot
+
 from facilities.models import Facility
+from timetable.models.time_slot import TimeSlot
 
 class RoomSchedule(TimestampedModel, UUIDModel):
     room = models.ForeignKey(Facility, on_delete=models.CASCADE, related_name='room_schedules')

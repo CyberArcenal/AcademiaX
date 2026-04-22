@@ -2,9 +2,9 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.question import Question
-from ..models.assessment import Assessment
-from ...common.enums.assessment import QuestionType
+from assessments.models.question import Question
+from assessments.models.assessment import Assessment
+from common.enums.assessment import QuestionType
 
 class QuestionService:
     """Service for Question model operations"""

@@ -4,11 +4,12 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
-from ..models.fee_structure import FeeStructure
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.grade_level import GradeLevel
-from ...academic.models.academic_program import AcademicProgram
-from ...common.enums.fees import FeeCategory
+
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
+from academic.models.academic_program import AcademicProgram
+from common.enums.fees import FeeCategory
+from fees.models.fee_structure import FeeStructure
 
 class FeeStructureService:
     """Service for FeeStructure model operations"""

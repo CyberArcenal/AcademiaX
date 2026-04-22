@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from reports.models import ReportLog
+from reports.models.report import Report
+from users.models.user import User
 from .report import ReportMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

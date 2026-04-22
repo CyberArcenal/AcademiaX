@@ -2,9 +2,10 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.facility import Facility
-from ..models.building import Building
-from ...common.enums.facilities import FacilityType, FacilityStatus
+
+from common.enums.facilities import FacilityType, FacilityStatus
+from facilities.models.building import Building
+from facilities.models.facility import Facility
 
 class FacilityService:
     """Service for Facility model operations"""

@@ -3,9 +3,11 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date
 
-from ..models.employment import Employment
-from ..models.alumni import Alumni
-from ...common.enums.alumni import EmploymentType
+from alumni.models.alumni import Alumni
+from alumni.models.employment import Employment
+from common.enums.alumni import EmploymentType
+
+
 
 class EmploymentService:
     """Service for Employment model operations"""

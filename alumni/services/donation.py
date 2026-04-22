@@ -2,10 +2,12 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date
+from django.db import models
+from alumni.models.alumni import Alumni
+from alumni.models.donation import Donation
+from common.enums.alumni import DonationPurpose
 
-from ..models.donation import Donation
-from ..models.alumni import Alumni
-from ...common.enums.alumni import DonationPurpose
+
 
 class DonationService:
     """Service for Donation model operations"""

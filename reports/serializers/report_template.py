@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from reports.models import ReportTemplate
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 
@@ -10,7 +11,7 @@ class ReportTemplateMinimalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ReportTemplate
-        fields = ["id", "name", "report_type", "is_default", "is_active"]
+        fields = ["id", "name", "report_type", "is_default", "is_active", "created_by"]
         read_only_fields = fields
 
 

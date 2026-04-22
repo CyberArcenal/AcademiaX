@@ -4,10 +4,12 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List
 from decimal import Decimal
 
-from ..models.attendance_summary import StudentAttendanceSummary
-from ...students.models.student import Student
-from ...classes.models.academic_year import AcademicYear
-from ...common.enums.attendance import AttendanceStatus
+from attendance.models.attendance_summary import StudentAttendanceSummary
+from classes.models.academic_year import AcademicYear
+from common.enums.attendance import AttendanceStatus
+from students.models.student import Student
+
+
 
 class StudentAttendanceSummaryService:
     """Service for StudentAttendanceSummary model operations"""

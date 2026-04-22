@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from classes.models.academic_year import AcademicYear
 from timetable.models import TimeSlot
 from classes.serializers.academic_year import AcademicYearMinimalSerializer
 
@@ -10,7 +11,7 @@ class TimeSlotMinimalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TimeSlot
-        fields = ["id", "name", "day_of_week", "start_time", "end_time", "order"]
+        fields = ["id", "name", "day_of_week", "start_time", "end_time", "order", "academic_year"]
         read_only_fields = fields
 
 

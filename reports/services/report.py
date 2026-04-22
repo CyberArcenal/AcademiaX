@@ -5,8 +5,8 @@ from typing import Optional, List, Dict, Any
 from datetime import datetime
 
 from ..models.report import Report
-from ...users.models import User
-from ...common.enums.reports import ReportType, ReportFormat, ReportStatus
+from users.models import User
+from common.enums.reports import ReportType, ReportFormat, ReportStatus
 
 class ReportService:
     """Service for Report model operations"""

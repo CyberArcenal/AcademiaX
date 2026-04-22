@@ -2,9 +2,10 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List
 
-from ..models.attachment import MessageAttachment
-from ..models.message import Message
-from ...users.models import User
+
+from communication.models import Message
+from communication.models.attachment import MessageAttachment
+from users.models import User
 
 class MessageAttachmentService:
     """Service for MessageAttachment model operations"""

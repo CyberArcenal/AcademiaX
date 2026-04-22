@@ -3,10 +3,12 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date, time
 
-from ..models.test_schedule_override import ScheduleOverride
-from ..models.test_schedule import Schedule
-from ...facilities.models.facility import Facility
-from ...teachers.models.teacher import Teacher
+from timetable.models.schedule import Schedule
+from timetable.models.schedule_override import ScheduleOverride
+
+
+from facilities.models.facility import Facility
+from teachers.models.teacher import Teacher
 
 class ScheduleOverrideService:
     """Service for ScheduleOverride model operations"""

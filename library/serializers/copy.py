@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from library.models import BookCopy
+from library.models.book import Book
 from .book import BookMinimalSerializer
 
 

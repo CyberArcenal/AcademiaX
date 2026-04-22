@@ -2,9 +2,9 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from django.utils import timezone
-from ..models.conversation import Conversation
-from ...users.models import User
-from ...common.enums.communication import ConversationType
+from communication.models.conversation import Conversation
+from users.models import User
+from common.enums.communication import ConversationType
 
 class ConversationService:
     """Service for Conversation model operations"""

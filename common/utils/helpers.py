@@ -1,11 +1,16 @@
 from ipaddress import ip_address as validate_ip
 import logging
 import socket
+from django.core.validators import RegexValidator
 from django.http import HttpRequest
 from typing import Optional, Dict, Any, Union, List
 
 logger = logging.getLogger(__name__)
 
+phone_regex = RegexValidator(
+    regex=r'^\+?1?\d{9,15}$',
+    message="Phone number must be entered in the format: '+639171234567'. Up to 15 digits allowed."
+)
 
 def get_client_ip(request: HttpRequest) -> Optional[str]:
     """

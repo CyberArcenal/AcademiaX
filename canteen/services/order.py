@@ -4,12 +4,12 @@ from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
-from ..models.order import Order
-from ..models.order_item import OrderItem
-from ..models.product import Product
-from ...students.models.student import Student
-from ...users.models import User
-from ...common.enums.canteen import OrderStatus, OrderType
+from canteen.models.order import Order
+from common.enums.canteen import OrderStatus, OrderType
+from students.models.student import Student
+from users.models.user import User
+
+
 
 class OrderService:
     """Service for Order model operations"""

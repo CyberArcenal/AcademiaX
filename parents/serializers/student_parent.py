@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from parents.models import StudentParent
+from parents.models.parent import Parent
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
 from .parent import ParentMinimalSerializer
 

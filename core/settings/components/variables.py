@@ -10,7 +10,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-# AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.User"
 SITE_ID = 1
 DJANGO_VERSION = "5.2.3"
 SYSTEM_VERSION = os.getenv("SYSTEM_VERSION", None)

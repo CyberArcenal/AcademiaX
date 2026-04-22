@@ -8,6 +8,7 @@ class Author(TimestampedModel, UUIDModel, SoftDeleteModel):
     biography = models.TextField(blank=True)
     birth_date = models.DateField(null=True, blank=True)
     death_date = models.DateField(null=True, blank=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['last_name', 'first_name']

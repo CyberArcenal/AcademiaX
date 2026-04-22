@@ -3,8 +3,10 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.classroom import Classroom
-from ...common.enums.classes import RoomType
+from classes.models.classroom import Classroom
+from common.enums.classes import RoomType
+
+
 
 class ClassroomService:
     """Service for Classroom model operations"""
@@ -94,7 +96,7 @@ class ClassroomService:
     @staticmethod
     def get_available_classrooms(time_slot_id: Optional[int] = None, date: Optional[date] = None) -> List[Classroom]:
         """Get classrooms that are not reserved at a given time (simplified)"""
-        from ...timetable.models import Schedule, RoomSchedule
+        from timetable.models import Schedule, RoomSchedule
         queryset = Classroom.objects.filter(is_active=True)
         if time_slot_id and date:
             # Exclude classrooms with schedule on that time slot and date

@@ -4,10 +4,9 @@ from django.db.models import Sum
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 from datetime import date
-
-from ..models.collection import CollectionReport
-from ..models.payment import Payment
-from ...users.models import User
+from fees.models.collection import CollectionReport
+from fees.models.payment import Payment
+from users.models import User
 
 class CollectionReportService:
     """Service for CollectionReport model operations"""

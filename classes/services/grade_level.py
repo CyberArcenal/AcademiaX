@@ -2,8 +2,8 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.grade_level import GradeLevel
-from ...common.enums.academic import GradeLevel as GradeLevelChoices
+from classes.models.grade_level import GradeLevel
+
 
 class GradeLevelService:
     """Service for GradeLevel model operations"""

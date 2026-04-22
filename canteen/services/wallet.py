@@ -3,8 +3,10 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
-from ..models.wallet import Wallet, WalletTransaction
-from ...users.models import User
+from canteen.models.wallet import Wallet, WalletTransaction
+from users.models.user import User
+
+
 
 class WalletService:
     """Service for Wallet model operations"""

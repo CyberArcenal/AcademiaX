@@ -3,10 +3,12 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date, time
 
-from ..models.teacher_attendance import TeacherAttendance
-from ...teachers.models.teacher import Teacher
-from ...users.models import User
-from ...common.enums.attendance import AttendanceStatus
+from attendance.models.teacher_attendance import TeacherAttendance
+from common.enums.attendance import AttendanceStatus
+from teachers.models.teacher import Teacher
+from users.models.user import User
+
+
 
 class TeacherAttendanceService:
     """Service for TeacherAttendance model operations"""

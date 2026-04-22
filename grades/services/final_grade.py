@@ -4,11 +4,11 @@ from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
 from ..models.final_grade import FinalGrade
-from ...students.models.student import Student
-from ...academic.models.subject import Subject
-from ...enrollments.models.enrollment import Enrollment
-from ...classes.models.academic_year import AcademicYear
-from ...common.enums.grades import GradeStatus
+from students.models.student import Student
+from academic.models.subject import Subject
+from enrollments.models.enrollment import Enrollment
+from classes.models.academic_year import AcademicYear
+from common.enums.grades import GradeStatus
 
 class FinalGradeService:
     """Service for FinalGrade model operations"""

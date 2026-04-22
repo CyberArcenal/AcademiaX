@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from communication.models import BroadcastLog
+from communication.models.announcement import Announcement
+from users.models.user import User
 from .announcement import AnnouncementMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

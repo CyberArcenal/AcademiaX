@@ -4,10 +4,10 @@ from typing import Optional, List, Dict, Any
 from decimal import Decimal
 
 from ..models.report_card import ReportCard
-from ...students.models.student import Student
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.term import Term
-from ...users.models import User
+from students.models.student import Student
+from classes.models.academic_year import AcademicYear
+from classes.models.term import Term
+from users.models import User
 
 class ReportCardService:
     """Service for ReportCard model operations"""

@@ -1,7 +1,8 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from facilities.models import Facility
-from facilities.state_transition_service.facility import FacilityStateTransitionService
+from facilities.state_transition_services.facility import FacilityStateTransitionService
+
 
 
 @receiver(pre_save, sender=Facility)

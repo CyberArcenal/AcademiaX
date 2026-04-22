@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from students.models import Guardian
+from students.models.student import Student
 from .student import StudentMinimalSerializer
 
 

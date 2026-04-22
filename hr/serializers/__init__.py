@@ -1,9 +1,4 @@
-from .department import (
-    DepartmentMinimalSerializer,
-    DepartmentCreateSerializer,
-    DepartmentUpdateSerializer,
-    DepartmentDisplaySerializer,
-)
+
 from .position import (
     PositionMinimalSerializer,
     PositionCreateSerializer,
@@ -43,4 +38,11 @@ from .payslip import (
     PayslipCreateSerializer,
     PayslipUpdateSerializer,
     PayslipDisplaySerializer,
+)
+
+from .department import (
+    DepartmentMinimalSerializer,
+    DepartmentCreateSerializer,
+    DepartmentUpdateSerializer,
+    DepartmentDisplaySerializer,
 )

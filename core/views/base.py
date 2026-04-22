@@ -1,6 +1,8 @@
+import os
 from django.http import JsonResponse
 from django.db import connections
 from django.db.utils import OperationalError
+system_version = os.getenv("SYSTEM_VERSION", "1.0.0")
 
 def health_check(request):
     db_status = "ok"
@@ -12,5 +14,5 @@ def health_check(request):
     return JsonResponse({
         "status": "ok" if db_status == "ok" else "error",
         "database": db_status,
-        "version": "1.0.0"
+        "version": str(system_version)
     })

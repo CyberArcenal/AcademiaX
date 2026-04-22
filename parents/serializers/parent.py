@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from parents.models import Parent
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

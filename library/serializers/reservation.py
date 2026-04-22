@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from library.models import Reservation
+from library.models.copy import BookCopy
+from students.models.student import Student
 from .copy import BookCopyMinimalSerializer
 from students.serializers.student import StudentMinimalSerializer
 

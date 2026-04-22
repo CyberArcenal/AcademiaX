@@ -1,8 +1,7 @@
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from library.models import BookCopy
-from library.state_transition_service.copy import BookCopyStateTransitionService
-
+from library.state_transition_services.copy import BookCopyStateTransitionService
 
 @receiver(pre_save, sender=BookCopy)
 def copy_pre_save(sender, instance, **kwargs):

@@ -3,14 +3,13 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from typing import Optional, List, Dict, Any
 from datetime import date
-
-from ..models.enrollment import Enrollment
-from ...students.models.student import Student
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.grade_level import GradeLevel
-from ...classes.models.section import Section
-from ...users.models import User
-from ...common.enums.enrollment import EnrollmentStatus, DropReason, EnrollmentPaymentStatus
+from enrollments.models.enrollment import Enrollment
+from students.models.student import Student
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
+from classes.models.section import Section
+from users.models import User
+from common.enums.enrollment import EnrollmentStatus, DropReason, EnrollmentPaymentStatus
 
 class EnrollmentService:
     """Service for Enrollment model operations"""

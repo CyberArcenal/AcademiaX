@@ -1,6 +1,9 @@
 from rest_framework import serializers
 from assessments.models import Submission
+from assessments.models.assessment import Assessment
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
+from users.models.user import User
 from .assessment import AssessmentMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

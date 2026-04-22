@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from canteen.models import OrderItem
+from canteen.models.order import Order
+from canteen.models.product import Product
 from .order import OrderMinimalSerializer
 from .product import ProductMinimalSerializer
 

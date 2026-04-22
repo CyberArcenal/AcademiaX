@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from communication.models import Notification
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from fees.models import Payment
-from fees.state_transition_service.payment import PaymentStateTransitionService
+from fees.state_transition_services.payment import PaymentStateTransitionService
 
 
 @receiver(post_save, sender=Payment)

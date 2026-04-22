@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from canteen.models import Order
+from students.models.student import Student
 from students.serializers.student import StudentMinimalSerializer
+from users.models.user import User
 from users.serializers.user.minimal import UserMinimalSerializer
 
 

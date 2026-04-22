@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from academic.models import subject
+from academic.models import Subject
 from attendance.models import StudentAttendance
 from classes.models.academic_year import AcademicYear
 from classes.models.section import Section
@@ -33,7 +33,7 @@ class StudentAttendanceCreateSerializer(serializers.ModelSerializer):
         queryset=Section.objects.all(), source="section"
     )
     subject_id = serializers.PrimaryKeyRelatedField(
-        queryset=subject.objects.all(), source="subject"
+        queryset=Subject.objects.all(), source="subject"
     )
     academic_year_id = serializers.PrimaryKeyRelatedField(
         queryset=AcademicYear.objects.all(), source="academic_year"

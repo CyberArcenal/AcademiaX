@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from facilities.models import Facility
+from facilities.models.building import Building
 from .building import BuildingMinimalSerializer
 
 

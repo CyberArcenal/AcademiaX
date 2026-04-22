@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from hr.models import Payslip
+from hr.models.employee import Employee
+from hr.models.payroll import PayrollPeriod
 from .employee import EmployeeMinimalSerializer
 from .payroll import PayrollPeriodMinimalSerializer
 

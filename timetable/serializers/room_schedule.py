@@ -1,6 +1,8 @@
 from rest_framework import serializers
+from facilities.models.facility import Facility
 from timetable.models import RoomSchedule
 from facilities.serializers.facility import FacilityMinimalSerializer
+from timetable.models.time_slot import TimeSlot
 from .time_slot import TimeSlotMinimalSerializer
 
 

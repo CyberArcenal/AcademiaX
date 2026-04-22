@@ -3,11 +3,10 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from decimal import Decimal
 from datetime import date
-
-from ..models.discount import Discount
-from ...classes.models.academic_year import AcademicYear
-from ...classes.models.grade_level import GradeLevel
-from ...common.enums.fees import DiscountType, FeeCategory
+from classes.models.academic_year import AcademicYear
+from classes.models.grade_level import GradeLevel
+from common.enums.fees import DiscountType, FeeCategory
+from fees.models.discount import Discount
 
 class DiscountService:
     """Service for Discount model operations"""

@@ -6,7 +6,7 @@ from datetime import date
 
 from ..models.student_document import StudentDocument
 from ..models.student import Student
-from ...users.models import User
+from users.models import User
 
 class StudentDocumentService:
     """Service for StudentDocument model operations"""

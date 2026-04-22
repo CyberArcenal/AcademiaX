@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from typing import Optional, List, Dict, Any
 
-from ..models.academic_program import AcademicProgram
-from ...common.enums.academic import CurriculumLevel
+from academic.models.academic_program import AcademicProgram
+
 
 class AcademicProgramService:
     """Service for AcademicProgram model operations"""

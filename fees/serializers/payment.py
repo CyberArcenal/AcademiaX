@@ -1,5 +1,7 @@
 from rest_framework import serializers
+from alumni.tests.test_alumni import User
 from fees.models import Payment
+from fees.models.fee_assessment import FeeAssessment
 from .fee_assessment import FeeAssessmentMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 

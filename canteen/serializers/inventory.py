@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from canteen.models import InventoryLog
+from canteen.models.product import Product
+from users.models.user import User
 from .product import ProductMinimalSerializer
 from users.serializers.user.minimal import UserMinimalSerializer
 
