@@ -73,7 +73,7 @@ class LoginSessionService:
         session.save(update_fields=['is_active'])
         
         # Blacklist the refresh token
-        from .blacklisted_access_token import BlacklistedAccessTokenService
+        from .blacklisted_token import BlacklistedAccessTokenService
         BlacklistedAccessTokenService.blacklist_token(
             jti=session.refresh_token,
             user=session.user,
@@ -94,7 +94,7 @@ class LoginSessionService:
             sessions = sessions.exclude(id=exclude_session_id)
         
         # Blacklist all refresh tokens first
-        from .blacklisted_access_token import BlacklistedAccessTokenService
+        from .blacklisted_token import BlacklistedAccessTokenService
         for session in sessions:
             BlacklistedAccessTokenService.blacklist_token(
                 jti=session.refresh_token,

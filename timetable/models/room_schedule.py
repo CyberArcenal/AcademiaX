@@ -1,6 +1,6 @@
 from django.db import models
 from common.base.models import TimestampedModel, UUIDModel
-from .time_slot import TimeSlot
+from .test_time_slot import TimeSlot
 from facilities.models import Facility
 
 class RoomSchedule(TimestampedModel, UUIDModel):

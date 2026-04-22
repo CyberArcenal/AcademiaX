@@ -13,7 +13,7 @@ from rest_framework_simplejwt.token_blacklist.models import (
 from django.db import transaction
 
 from common.permissions.roles import User
-from users.models.blacklisted_accesstoken import BlacklistedAccessToken
+from users.models.blacklisted_token import BlacklistedAccessToken
 from users.models.login_session import LoginSession
 from users.models.security_log import SecurityLog
 from common.utils.helpers import get_client_ip

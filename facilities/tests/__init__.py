@@ -1,6 +1,6 @@
-from .building import Building
-from .facility import Facility
-from .equipment import Equipment
-from .maintenance import MaintenanceRequest
-from .reservation import FacilityReservation
-from .usage_log import FacilityUsageLog
+from .test_building import BuildingModelTest, BuildingServiceTest, BuildingSerializerTest
+from .test_facility import FacilityModelTest, FacilityServiceTest, FacilitySerializerTest
+from .test_equipment import EquipmentModelTest, EquipmentServiceTest, EquipmentSerializerTest
+from .test_maintenance import MaintenanceRequestModelTest, MaintenanceRequestServiceTest, MaintenanceRequestSerializerTest
+from .test_reservation import FacilityReservationModelTest, FacilityReservationServiceTest, FacilityReservationSerializerTest
+from .test_usage_log import FacilityUsageLogModelTest, FacilityUsageLogServiceTest, FacilityUsageLogSerializerTest

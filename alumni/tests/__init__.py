@@ -1,0 +1,6 @@
+from .test_alumni import AlumniModelTest, AlumniServiceTest, AlumniSerializerTest
+from .test_employment import EmploymentModelTest, EmploymentServiceTest, EmploymentSerializerTest
+from .test_education import PostGraduateEducationModelTest, PostGraduateEducationServiceTest, PostGraduateEducationSerializerTest
+from .test_donation import DonationModelTest, DonationServiceTest, DonationSerializerTest
+from .test_event import AlumniEventModelTest, AlumniEventServiceTest, EventAttendanceModelTest, EventAttendanceServiceTest, EventSerializerTest
+from .test_achievement import AlumniAchievementModelTest, AlumniAchievementServiceTest, AlumniAchievementSerializerTest

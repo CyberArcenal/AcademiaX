@@ -1,4 +1,3 @@
-
 import uuid
 from django.conf import settings
 from django.utils import timezone
@@ -6,15 +5,13 @@ from django.db import models
 
 
 class LoginCheckpoint(models.Model):
-    """Secure checkpoint for 2FA login or registration flow"""
-
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        null=True,  # allow None for pre-registration checkpoints
+        null=True,
         blank=True,
     )
-    email = models.EmailField(null=True, blank=True)  # optional traceability
+    email = models.EmailField(null=True, blank=True)
     token = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
     created_at = models.DateTimeField(auto_now_add=True)
     expires_at = models.DateTimeField()
@@ -23,9 +20,7 @@ class LoginCheckpoint(models.Model):
     class Meta:
         verbose_name = "Login Checkpoint"
         verbose_name_plural = "Login Checkpoints"
-        indexes = [
-            models.Index(fields=["expires_at"]),
-        ]
+        indexes = [models.Index(fields=["expires_at"])]
 
     def __str__(self):
         if self.user:

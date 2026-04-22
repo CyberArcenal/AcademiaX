@@ -83,3 +83,13 @@ class UserSecuritySettingsService:
         """Check if 2FA is enabled for user"""
         settings = UserSecuritySettingsService.get_settings(user)
         return settings.two_factor_enabled if settings else False
+    
+    @staticmethod
+    def update_recovery_contacts(user, recovery_email=None, recovery_phone=None):
+        settings = UserSecuritySettingsService.get_or_create_settings(user)
+        if recovery_email is not None:
+            settings.recovery_email = recovery_email
+        if recovery_phone is not None:
+            settings.recovery_phone = recovery_phone
+        settings.save()
+        return settings

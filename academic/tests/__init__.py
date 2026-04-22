@@ -1,0 +1,6 @@
+from .test_subject import SubjectModelTest, SubjectServiceTest, SubjectSerializerTest
+from .test_academic_program import AcademicProgramModelTest, AcademicProgramServiceTest, AcademicProgramSerializerTest
+from .test_curriculum import CurriculumModelTest, CurriculumServiceTest, CurriculumSerializerTest
+from .test_curriculum_subject import CurriculumSubjectModelTest, CurriculumSubjectServiceTest, CurriculumSubjectSerializerTest
+from .test_learning_outcome import LearningOutcomeModelTest, LearningOutcomeServiceTest, LearningOutcomeSerializerTest
+from .test_prerequisite import PrerequisiteModelTest, PrerequisiteServiceTest, PrerequisiteSerializerTest

@@ -1,3 +1,3 @@
-from .parent import Parent
-from .student_parent import StudentParent
-from .parent_communication import ParentCommunicationLog
+from .test_parent import ParentModelTest, ParentServiceTest, ParentSerializerTest
+from .test_student_parent import StudentParentModelTest, StudentParentServiceTest, StudentParentSerializerTest
+from .test_parent_communication import ParentCommunicationLogModelTest, ParentCommunicationLogServiceTest, ParentCommunicationLogSerializerTest

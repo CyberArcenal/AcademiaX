@@ -1,0 +1,7 @@
+from .test_assessment import AssessmentModelTest, AssessmentServiceTest, AssessmentSerializerTest
+from .test_question import QuestionModelTest, QuestionServiceTest, QuestionSerializerTest
+from .test_choice import ChoiceModelTest, ChoiceServiceTest, ChoiceSerializerTest
+from .test_submission import SubmissionModelTest, SubmissionServiceTest, SubmissionSerializerTest
+from .test_answer import AnswerModelTest, AnswerServiceTest, AnswerSerializerTest
+from .test_rubric import RubricCriterionModelTest, RubricCriterionServiceTest, RubricLevelModelTest, RubricLevelServiceTest, RubricSerializerTest
+from .test_grade import AssessmentGradeModelTest, AssessmentGradeServiceTest, AssessmentGradeSerializerTest

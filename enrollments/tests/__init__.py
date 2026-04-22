@@ -1,4 +1,4 @@
-from .enrollment import Enrollment
-from .enrollment_history import EnrollmentHistory
-from .subject_enrollment import SubjectEnrollment
-from .enrollment_hold import EnrollmentHold
+from .test_enrollment import EnrollmentModelTest, EnrollmentServiceTest, EnrollmentSerializerTest
+from .test_enrollment_history import EnrollmentHistoryModelTest, EnrollmentHistoryServiceTest, EnrollmentHistorySerializerTest
+from .test_subject_enrollment import SubjectEnrollmentModelTest, SubjectEnrollmentServiceTest, SubjectEnrollmentSerializerTest
+from .test_enrollment_hold import EnrollmentHoldModelTest, EnrollmentHoldServiceTest, EnrollmentHoldSerializerTest

@@ -1,6 +1,6 @@
 from django.db import models
 from common.base.models import TimestampedModel, UUIDModel
-from .schedule import Schedule
+from .test_schedule import Schedule
 
 class ScheduleOverride(TimestampedModel, UUIDModel):
     schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE, related_name='overrides')

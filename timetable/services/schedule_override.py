@@ -3,8 +3,8 @@ from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 from datetime import date, time
 
-from ..models.schedule_override import ScheduleOverride
-from ..models.schedule import Schedule
+from ..models.test_schedule_override import ScheduleOverride
+from ..models.test_schedule import Schedule
 from ...facilities.models.facility import Facility
 from ...teachers.models.teacher import Teacher
 

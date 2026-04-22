@@ -1,0 +1,5 @@
+from .test_student import StudentModelTest, StudentServiceTest, StudentSerializerTest
+from .test_guardian import GuardianModelTest, GuardianServiceTest, GuardianSerializerTest
+from .test_medical_record import MedicalRecordModelTest, MedicalRecordServiceTest, MedicalRecordSerializerTest
+from .test_student_document import StudentDocumentModelTest, StudentDocumentServiceTest, StudentDocumentSerializerTest
+from .test_student_achievement import StudentAchievementModelTest, StudentAchievementServiceTest, StudentAchievementSerializerTest

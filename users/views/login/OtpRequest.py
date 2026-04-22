@@ -11,7 +11,7 @@ from common.base.paginations import StandardResultsSetPagination
 from common.permissions.roles import IsAccountActive, is_admin
 from common.utils.authentications import IsAuthenticatedAndNotBlacklisted
 from users.models.otp_request import OtpRequest
-from users.serializers.otp import (
+from users.serializers.otp_request import (
     OtpRequestMinimalSerializer,
     OtpRequestDisplaySerializer,
 )

@@ -1,6 +1,6 @@
-from .fee_structure import FeeStructure
-from .fee_assessment import FeeAssessment
-from .payment import Payment
-from .discount import Discount
-from .scholarship import Scholarship
-from .collection import CollectionReport
+from .test_fee_structure import FeeStructureModelTest, FeeStructureServiceTest, FeeStructureSerializerTest
+from .test_fee_assessment import FeeAssessmentModelTest, FeeAssessmentServiceTest, FeeAssessmentSerializerTest
+from .test_payment import PaymentModelTest, PaymentServiceTest, PaymentSerializerTest
+from .test_discount import DiscountModelTest, DiscountServiceTest, DiscountSerializerTest
+from .test_scholarship import ScholarshipModelTest, ScholarshipServiceTest, ScholarshipSerializerTest
+from .test_collection import CollectionReportModelTest, CollectionReportServiceTest, CollectionReportSerializerTest

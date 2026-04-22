@@ -28,7 +28,7 @@ from users.models.login_checkpoint import LoginCheckpoint
 from users.models.login_session import LoginSession
 from users.models.otp_request import OtpRequest
 from users.models.security_log import SecurityLog
-from users.models.user_security_setting import UserSecuritySettings
+from users.models.user_security_settings import UserSecuritySettings
 from users.serializers.auth import (
     LoginRequestSerializer,
     Verify2FARequestSerializer,

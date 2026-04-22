@@ -16,7 +16,7 @@ from common.base.paginations import StandardResultsSetPagination
 from common.permissions.roles import is_admin
 from common.utils.authentications import IsAuthenticatedAndNotBlacklisted
 from users.models.login_checkpoint import LoginCheckpoint
-from users.serializers.checkpoint import LoginCheckpointDisplaySerializer, LoginCheckpointMinimalSerializer
+from users.serializers.login_checkpoint import LoginCheckpointDisplaySerializer, LoginCheckpointMinimalSerializer
 logger = logging.getLogger(__name__)
 
 

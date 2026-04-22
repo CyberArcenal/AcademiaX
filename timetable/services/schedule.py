@@ -2,8 +2,8 @@ from django.db import transaction
 from django.core.exceptions import ValidationError
 from typing import Optional, List, Dict, Any
 
-from ..models.schedule import Schedule
-from ..models.time_slot import TimeSlot
+from ..models.test_schedule import Schedule
+from ..models.test_time_slot import TimeSlot
 from ...classes.models.section import Section
 from ...academic.models.subject import Subject
 from ...teachers.models.teacher import Teacher

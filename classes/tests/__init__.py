@@ -1,5 +1,5 @@
-from .academic_year import AcademicYear
-from .term import Term
-from .grade_level import GradeLevel
-from .classroom import Classroom
-from .section import Section
+from .test_academic_year import AcademicYearModelTest, AcademicYearServiceTest, AcademicYearSerializerTest
+from .test_term import TermModelTest, TermServiceTest, TermSerializerTest
+from .test_grade_level import GradeLevelModelTest, GradeLevelServiceTest, GradeLevelSerializerTest
+from .test_classroom import ClassroomModelTest, ClassroomServiceTest, ClassroomSerializerTest
+from .test_section import SectionModelTest, SectionServiceTest, SectionSerializerTest

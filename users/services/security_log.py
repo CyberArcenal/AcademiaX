@@ -6,15 +6,6 @@ from ..models import SecurityLog, User
 class SecurityLogService:
     """Service for SecurityLog model operations"""
     
-    EVENT_TYPES = [
-        ("login", "Login"),
-        ("logout", "Logout"),
-        ("password_change", "Password Change"),
-        ("2fa_enabled", "2FA Enabled"),
-        ("2fa_disabled", "2FA Disabled"),
-        ("failed_login", "Failed Login"),
-    ]
-    
     @staticmethod
     def create_log(
         user: User,

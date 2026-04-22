@@ -1,5 +1,5 @@
-from .grade import Grade
-from .grade_component import GradeComponent
-from .final_grade import FinalGrade
-from .report_card import ReportCard
-from .transcript import Transcript
+from .test_grade import GradeModelTest, GradeServiceTest, GradeSerializerTest
+from .test_grade_component import GradeComponentModelTest, GradeComponentServiceTest, GradeComponentSerializerTest
+from .test_final_grade import FinalGradeModelTest, FinalGradeServiceTest, FinalGradeSerializerTest
+from .test_report_card import ReportCardModelTest, ReportCardServiceTest, ReportCardSerializerTest
+from .test_transcript import TranscriptModelTest, TranscriptServiceTest, TranscriptSerializerTest

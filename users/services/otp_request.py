@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from typing import Optional
 
-from users.models.utilities import OTP_TYPES
+from users.enums.otp_request import OtpRequestType
 from ..models import OtpRequest, User
 
 
@@ -27,7 +27,7 @@ class OtpRequestService:
         if not user and not email and not phone:
             raise ValueError("Either user, email, or phone must be provided")
 
-        if otp_type not in dict(OTP_TYPES):
+        if otp_type not in dict(OtpRequestType.choices):
             raise ValidationError(f"Invalid OTP type: {otp_type}")
 
         otp_code = OtpRequestService.generate_otp_code()

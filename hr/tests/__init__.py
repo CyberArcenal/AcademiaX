@@ -1,6 +1,7 @@
-from .department import Department
-from .position import Position
-from .employee import Employee
-from .leave import LeaveRequest
-from .attendance import EmployeeAttendance
-from .payroll import SalaryGrade, PayrollPeriod, Payslip
+from .test_department import DepartmentModelTest, DepartmentServiceTest, DepartmentSerializerTest
+from .test_position import PositionModelTest, PositionServiceTest, PositionSerializerTest
+from .test_employee import EmployeeModelTest, EmployeeServiceTest, EmployeeSerializerTest
+from .test_leave import LeaveRequestModelTest, LeaveRequestServiceTest, LeaveRequestSerializerTest
+from .test_attendance import EmployeeAttendanceModelTest, EmployeeAttendanceServiceTest, EmployeeAttendanceSerializerTest
+from .test_payroll import SalaryGradeModelTest, SalaryGradeServiceTest, SalaryGradeSerializerTest, PayrollPeriodModelTest, PayrollPeriodServiceTest, PayrollPeriodSerializerTest
+from .test_payslip import PayslipModelTest, PayslipServiceTest, PayslipSerializerTest

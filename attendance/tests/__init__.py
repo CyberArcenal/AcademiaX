@@ -1,0 +1,4 @@
+from .test_student_attendance import StudentAttendanceModelTest, StudentAttendanceServiceTest, StudentAttendanceSerializerTest
+from .test_teacher_attendance import TeacherAttendanceModelTest, TeacherAttendanceServiceTest, TeacherAttendanceSerializerTest
+from .test_attendance_summary import StudentAttendanceSummaryModelTest, StudentAttendanceSummaryServiceTest, StudentAttendanceSummarySerializerTest
+from .test_holiday import HolidayModelTest, HolidayServiceTest, HolidaySerializerTest

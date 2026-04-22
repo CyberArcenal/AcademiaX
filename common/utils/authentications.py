@@ -3,7 +3,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from rest_framework_simplejwt.exceptions import InvalidToken
 from django.utils import timezone
 
-from users.models.blacklisted_accesstoken import BlacklistedAccessToken
+from users.models.blacklisted_token import BlacklistedAccessToken
 
 
 class IsAuthenticatedAndNotBlacklisted(IsAuthenticated):

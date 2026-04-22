@@ -1,6 +1,8 @@
-from .announcement import Announcement
-from .notification import Notification
-from .conversation import Conversation
-from .message import Message
-from .attachment import MessageAttachment
-from .broadcast_log import BroadcastLog
+from .test_announcement import AnnouncementModelTest, AnnouncementServiceTest, AnnouncementSerializerTest
+from .test_notification import NotificationModelTest, NotificationServiceTest, NotificationSerializerTest
+from .test_conversation import ConversationModelTest, ConversationServiceTest, ConversationSerializerTest
+from .test_message import MessageModelTest, MessageServiceTest, MessageSerializerTest
+from .test_attachment import MessageAttachmentModelTest, MessageAttachmentServiceTest, MessageAttachmentSerializerTest
+from .test_broadcast_log import BroadcastLogModelTest, BroadcastLogServiceTest, BroadcastLogSerializerTest
+from .test_email_template import EmailTemplateModelTest
+from .test_notify_log import NotifyLogModelTest

@@ -1,0 +1,4 @@
+from .test_teacher import TeacherModelTest, TeacherServiceTest, TeacherSerializerTest
+from .test_specialization import SpecializationModelTest, SpecializationServiceTest, SpecializationSerializerTest
+from .test_teaching_assignment import TeachingAssignmentModelTest, TeachingAssignmentServiceTest, TeachingAssignmentSerializerTest
+from .test_teacher_qualification import TeacherQualificationModelTest, TeacherQualificationServiceTest, TeacherQualificationSerializerTest

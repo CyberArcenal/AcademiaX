@@ -1,5 +1,5 @@
 from users.services.security_log import SecurityLogService
-from users.services.blacklisted_access_token import BlacklistedAccessTokenService
+from users.services.blacklisted_token import BlacklistedAccessTokenService
 from django.utils import timezone
 
 

@@ -1,4 +1,4 @@
-from .time_slot import TimeSlot
-from .schedule import Schedule
-from .schedule_override import ScheduleOverride
-from .room_schedule import RoomSchedule
+from .test_time_slot import TimeSlotModelTest, TimeSlotServiceTest, TimeSlotSerializerTest
+from .test_schedule import ScheduleModelTest, ScheduleServiceTest, ScheduleSerializerTest
+from .test_schedule_override import ScheduleOverrideModelTest, ScheduleOverrideServiceTest, ScheduleOverrideSerializerTest
+from .test_room_schedule import RoomScheduleModelTest, RoomScheduleServiceTest, RoomScheduleSerializerTest

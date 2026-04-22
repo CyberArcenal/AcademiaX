@@ -1,7 +1,7 @@
-from .author import Author
-from .publisher import Publisher
-from .book import Book
-from .copy import BookCopy
-from .borrow import BorrowTransaction
-from .fine import Fine
-from .reservation import Reservation
+from .test_author import AuthorModelTest, AuthorServiceTest, AuthorSerializerTest
+from .test_publisher import PublisherModelTest, PublisherServiceTest, PublisherSerializerTest
+from .test_book import BookModelTest, BookServiceTest, BookSerializerTest
+from .test_copy import BookCopyModelTest, BookCopyServiceTest, BookCopySerializerTest
+from .test_borrow import BorrowTransactionModelTest, BorrowTransactionServiceTest, BorrowTransactionSerializerTest
+from .test_fine import FineModelTest, FineServiceTest, FineSerializerTest
+from .test_reservation import ReservationModelTest, ReservationServiceTest, ReservationSerializerTest

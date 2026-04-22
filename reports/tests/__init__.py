@@ -1,0 +1,4 @@
+from .test_report import ReportModelTest, ReportServiceTest, ReportSerializerTest
+from .test_report_template import ReportTemplateModelTest, ReportTemplateServiceTest, ReportTemplateSerializerTest
+from .test_report_schedule import ReportScheduleModelTest, ReportScheduleServiceTest, ReportScheduleSerializerTest
+from .test_report_log import ReportLogModelTest, ReportLogServiceTest, ReportLogSerializerTest

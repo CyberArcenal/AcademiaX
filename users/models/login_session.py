@@ -5,8 +5,6 @@ from django.db import models
 
 
 class LoginSession(models.Model):
-    """Tracks user login sessions for JWT tokens"""
-
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -20,20 +18,14 @@ class LoginSession(models.Model):
     last_used = models.DateTimeField(auto_now=True)
     expires_at = models.DateTimeField()
     is_active = models.BooleanField(default=True)
-    refresh_token = models.CharField(
-        max_length=255, unique=True
-    )  # Store refresh token jti
-    access_token = models.CharField(
-        max_length=255, blank=True
-    )  # Store access token jti
+    refresh_token = models.CharField(max_length=255, unique=True)
+    access_token = models.CharField(max_length=255, blank=True)
 
     class Meta:
         verbose_name = "Login Session"
         verbose_name_plural = "Login Sessions"
         ordering = ["-last_used"]
-        indexes = [
-            models.Index(fields=["user", "last_used"]),
-        ]
+        indexes = [models.Index(fields=["user", "last_used"])]
 
     def __str__(self):
         return f"{self.user.username} - {self.device_name}"
